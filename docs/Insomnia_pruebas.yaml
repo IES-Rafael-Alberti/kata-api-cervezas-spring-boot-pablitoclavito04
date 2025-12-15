@@ -1,0 +1,323 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: API cervezas
+meta:
+  id: wrk_6a92e94c88334f22a524d1adb22c84e6
+  created: 1765790685289
+  modified: 1765790685289
+  description: ""
+collection:
+  - url: http://localhost:8080/beers
+    name: Listar todas las cervezas
+    meta:
+      id: req_477d0e6dcea54a08a8ec54314f8298ce
+      created: 1765790692167
+      modified: 1765792651679
+      isPrivate: false
+      description: ""
+      sortKey: -1765790692167
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/beer/1
+    name: Obtener cerveza por ID
+    meta:
+      id: req_12ee24d167c34036928a4805fb9cec57
+      created: 1765790704499
+      modified: 1765792682484
+      isPrivate: false
+      description: ""
+      sortKey: -1765790704499
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/beer
+    name: Crear nueva cerveza
+    meta:
+      id: req_d20a0e1ed463406088fc2884175f9d34
+      created: 1765790706588
+      modified: 1765800666904
+      isPrivate: false
+      description: ""
+      sortKey: -1765790706588
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Mi Cerveza de Prueba",
+          "breweryId": 1,
+          "catId": 3,
+          "styleId": 26,
+          "abv": 5.5,
+          "ibu": 35,
+          "srm": 8,
+          "descript": "Cerveza creada para probar el POST"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/beer/3
+    name: Actualizar cerveza
+    meta:
+      id: req_eea8d6d1828c47008d32a848e3ddd2f6
+      created: 1765790708078
+      modified: 1765800226777
+      isPrivate: false
+      description: ""
+      sortKey: -1765790708078
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Cerveza Actualizada",
+          "abv": 6.0,
+          "descript": "Descripción modificada con PUT"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/beer/3
+    name: Eliminar cerveza
+    meta:
+      id: req_59ea4186e98a4e469e55b265c49a9b97
+      created: 1765790710225
+      modified: 1765800263361
+      isPrivate: false
+      description: ""
+      sortKey: -1765790710225
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/beer/99999
+    name: Verificar error 404
+    meta:
+      id: req_ca0baa061fea4177b9219c48639003a2
+      created: 1765800293167
+      modified: 1765800304673
+      isPrivate: false
+      description: ""
+      sortKey: -1765800293167
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/breweries
+    name: Listar todas las cerveceras
+    meta:
+      id: req_caf9c819a7314d91a49de12ad1abca25
+      created: 1765800746955
+      modified: 1765800782320
+      isPrivate: false
+      description: ""
+      sortKey: -1765800746955
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/brewerie/1
+    name: Obtener cervecera por ID
+    meta:
+      id: req_6d3c87040d74457f8a107037833ad514
+      created: 1765800817198
+      modified: 1765800828835
+      isPrivate: false
+      description: ""
+      sortKey: -1765800817198
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categories
+    name: Listar todas las categorías
+    meta:
+      id: req_d8bdc0ab8af846209d8939c738552a74
+      created: 1765800920766
+      modified: 1765800941278
+      isPrivate: false
+      description: ""
+      sortKey: -1765800920766
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categorie/1
+    name: Obtener categoría por ID
+    meta:
+      id: req_935363acde8243658c7304a08a358b50
+      created: 1765800922592
+      modified: 1765800972302
+      isPrivate: false
+      description: ""
+      sortKey: -1765800922592
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/styles
+    name: Listar todos los estilos
+    meta:
+      id: req_8af022a2fb3248deae90f698b58b3e28
+      created: 1765800997564
+      modified: 1765801014843
+      isPrivate: false
+      description: ""
+      sortKey: -1765800997564
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/style/1
+    name: Obtener estilo por ID
+    meta:
+      id: req_77ed4adcf9134659bd81bdb2ac8cb8d6
+      created: 1765800998947
+      modified: 1765801045611
+      isPrivate: false
+      description: ""
+      sortKey: -1765800998947
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4f00e07a46487f4f27a7c6c4018c26817cbf5361
+    created: 1765790685301
+    modified: 1765790685301
+environments:
+  name: Base Environment
+  meta:
+    id: env_4f00e07a46487f4f27a7c6c4018c26817cbf5361
+    created: 1765790685297
+    modified: 1765790685297
+    isPrivate: false
