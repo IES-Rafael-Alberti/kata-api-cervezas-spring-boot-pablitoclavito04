@@ -153,8 +153,8 @@ Este documento describe todas las pruebas a realizar sobre la API y dónde guard
 
 ## RESUMEN DE PRUEBAS
 
-| # | Endpoint     | Método | Status Esperado | ✅/❌ |
-|---|--------------|--------|-----------------|------|
+| # | Endpoint     | Método | Status Esperado |
+|---|--------------|--------|-----------------
 | 1.1 | /beers       | GET | 200 | |
 | 1.2 | /beer/1      | GET | 200 | |
 | 1.3 | /beer        | POST | 201 | |
