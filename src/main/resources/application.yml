@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: beer-api
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/kata-api?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: usuario
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.kata.beerapi: DEBUG
